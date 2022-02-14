@@ -17,7 +17,7 @@
                 <input class="form-control" type="password" name="senhaDoUsuario" id="senhaDoUsuario" placeholder="Senha">
             </div>
             <div class="row">
-                <input class="btn btn-outline-success" type="submit" value="LOGAR">
+                <input class="btn btn-success" type="submit" value="LOGAR">
             </div>
             <div class="row mt-3">
                 <p>Caso não tenha acesso entre em cotato com o sitor de TI.</p>
