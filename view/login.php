@@ -20,7 +20,7 @@
                 <input class="btn btn-success" type="submit" value="LOGAR">
             </div>
             <div class="row mt-3">
-                <p>Caso não tenha acesso entre em cotato com o sitor de TI.</p>
+                <p>Caso não tenha acesso entre em contato com o desenvolvedor de TI.</p>
             </div>       
         </form>
     </div>

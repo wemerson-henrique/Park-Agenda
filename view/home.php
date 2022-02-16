@@ -4,7 +4,10 @@
 <div class="card-body">
     <div class="row">
         <figure class="figure">
-            <img src="imagens/logParkAgenda.png" class="figure-img img-fluid rounded" alt="Log do site Park Agenda. A logo é semelhante um trevo e tem escrito no topo Park Agenda">
+            <img src="imagens/logParkAgenda.png" class="figure-img img-fluid rounded" 
+            alt="Log do site Park Agenda.
+             A logo é semelhante um trevo e tem escrito no topo Park Agenda" 
+             align="center" rele="alert">
         </figure>
     </div>
     <div class="row">
