@@ -1,0 +1,12 @@
+create database park_agenda;
+use park_agenda;
+ 
+create table boletim(
+ID int not null auto_increment primary key,
+Nome_Do_Criador varchar(20),
+Setor_Do_Criador varchar(20),
+Data_Da_Criacao varchar(10),
+Titulo varchar(30),
+Mensagem varchar(255)
+);
+
