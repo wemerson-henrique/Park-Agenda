@@ -1,5 +1,6 @@
 <?php
     include('conf-bootstrap-web.php');
+    include('..\controller\verificar-sessao.php');
 ?>
 <div class="card">
     <div class="card-header">
@@ -12,9 +13,8 @@
     </div>
     <div class="card-body px-5 py-5">
         <form action="..\controller\cadastra-boletim.php" method="post">
-            <input type="hidden" name="nomeDoCriador" value="Wemerson">
-            <input type="hidden" name="setorDoCriador" value="Setor de TI">
-            <input type="hidden" name="dataDaCriacao" value="<?php date("m.d.y"); ?>">
+            <input type="hidden" name="idDoCriador" value="<?php echo $_SESSION['id']; ?>">
+            <input type="hidden" name="dataDaCriacao" value="<?php echo date('d/m/Y'); ?>">
             <div class="row mb-5">
                 <input type="text" class="form-control" placeholder="Titulo Do Boletim" name="Titulo" id="Titulo">
             </div>

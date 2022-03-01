@@ -1,8 +1,9 @@
 <?php 
     include('conf-bootstrap-web.php');
+    include('..\controller\verificar-sessao.php');
 ?>
 <?php 
-    include('header.php');
+    include('componentes\header.php');
 ?>
 <div class="card-body">
     <div class="position-relative">
@@ -13,6 +14,12 @@
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                 </svg>
             </a>
+            <div data-bs-toggle="collapse" data-bs-target="#sair" role="button" aria-expanded="false" aria-controls="sair"><span><?php echo $_SESSION['usuario']; ?></span></div>
+            <div class="collapse" id="sair">
+                <a href="..\controller\terminar-sessao.php" class="btn btn-danger">
+                    SAIR
+                </a>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -24,7 +31,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4">
+        <div class="col-lg-4 col-md-12">
             <div class="card bg-dark text-white">
                 <img class="card-img" src="imagens/img-map.png" alt="Imagem do card">
                 <div class="card-img-overlay">
@@ -32,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 col-md-6">
             <div class="card bg-dark text-white">
                 <img class="card-img" src="imagens/administracao.jpg" alt="Imagem do card">
                 <div class="card-img-overlay">
@@ -40,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 col-md-6">
             <a href="boletins.php">
                 <div class="card bg-dark text-white">
                     <img class="card-img" src="imagens/boletins.png" alt="Imagem do card">

@@ -1,10 +1,10 @@
 <?php
 
-    include('conf-data-base.php');
+    require_once('conf-data-base.php');
 
     class Servidor extends conectarDataBase{
         public array $formDados;
-        public object $conn
+        public object $conn;
 
         public function Listar(): array {
             $this->conn = $this->connect();
