@@ -8,11 +8,9 @@
         $boletim->formDados = $formDados;
         $valor = $boletim->Cadastrar();
         if ($valor) {
-            echo '<script language="javascript">alert("Boletim enviado!");</script>';
-            echo"Boletim enviado!";
+            header('Location:..\view\boletins.php');
         } elseif (!empty($formDados['SendCaduser'])) {
-            echo '<script language="javascript">alert("ERRO: Boletim não enviado!");</script>';
-            echo"Boletim não enviado!";
+            echo"ERRO: Boletim não Publicado!";
         }
         
     }else{

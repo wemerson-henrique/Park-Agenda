@@ -26,7 +26,7 @@
                     CANCELAR
                 </a>
                 <input class="col-sm-3 btn btn-outline-warning me-md-2" type="reset" value="LIMPAR">
-                <input name="SendCaduser" class="col-sm-3 btn btn-success me-md-2 position-absolute top-50 end-0" type="submit" value="POSTAR">
+                <input onclick="alert('O boletim foi publicado!')" name="SendCaduser" class="col-sm-3 btn btn-success me-md-2 position-absolute top-50 end-0" type="submit" value="POSTAR">
             </div>
         </form>
     </div>

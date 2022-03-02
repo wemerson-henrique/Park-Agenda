@@ -28,8 +28,19 @@
 
         public function ListarBoletins(){
             $this->conn = $this->connect();
-            $query_boletim = "SELECT * FROM boletim";
+            $query_boletim = "SELECT * FROM boletim ORDER BY
+            ID DESC LIMIT 40";
             $boletim = $this->conn->prepare($query_boletim);
+            $boletim->execute();
+            $retorno = $boletim->fetchAll();
+            return $retorno;
+        }
+
+        public function VisualizarBoletim(){
+            $this->conn = $this->connect();
+            $query_boletim = "SELECT * FROM boletim WHERE ID = :id";
+            $boletim = $this->conn->prepare($query_boletim);
+            $boletim->bindParam(':id',$this->formDados['id']);
             $boletim->execute();
             $retorno = $boletim->fetchAll();
             return $retorno;
@@ -37,7 +48,8 @@
 
         public function ListarBoletinsParaExcluir($ID){
             $this->conn = $this->connect();
-            $query_boletim = "SELECT * FROM boletim WHERE ID_Do_Criador = :ID";
+            $query_boletim = "SELECT * FROM boletim WHERE ID_Do_Criador = :ID ORDER BY
+            ID DESC LIMIT 40";
             $boletim = $this->conn->prepare($query_boletim);
             $boletim->bindParam(':ID',$ID);
             $boletim->execute();
