@@ -72,5 +72,23 @@
                 return FALSE;
             }
         }
+
+        public function Atualizar(){
+            $this->conn = $this->connect();
+            $query_boletim = "UPDATE boletim SET Titulo=:Titulo, Mensagem=:Mensagem WHERE id = :idBoletim";
+
+            $boletim = $this->conn->prepare($query_boletim);
+
+            $boletim->bindParam(':idBoletim',$this->formDados['idBoletim']);
+            $boletim->bindParam(':Titulo',$this->formDados['Titulo']);
+            $boletim->bindParam(':Mensagem',$this->formDados['Mensagem']);
+
+            $boletim->execute();
+            if ($boletim->rowCount()) {
+                return TRUE;
+            } else {
+                return FALSE;
+            }
+        }
     }
 ?>
