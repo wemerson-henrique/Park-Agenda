@@ -1,0 +1,2 @@
+phpunit --verbose phpunit -> executa todos os testes
+phpunit boletinsTest.php -> executa tesde desse arquivo
